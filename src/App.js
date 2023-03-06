@@ -17,7 +17,7 @@ import Verification from './pages/Signup/Verification'
 import Chat from './pages/chat/Chat'
 import Admin_login from './components/admin/Admin_login';
 import Admin_home from './components/admin/Admin_home'
-import Admin_home1 from './components/admin/Admin_home1';
+
 function App() {
   return (
     <div className="App">
@@ -38,7 +38,7 @@ function App() {
       <Route path='/chat' element={<Chat/>} />
       <Route path='/admin_login' element={<Admin_login/>}/>
       <Route path='/admin_home' element={<PrivateRouter><Admin_home/></PrivateRouter>}/>
-      <Route path='/admin_home1' element = {<PrivateRouter><Admin_home1/></PrivateRouter>}/>
+
 
 
       </Routes>
