@@ -243,7 +243,7 @@ function Home(navigation) {
           <Sidebar />
         </Grid>
 
-        <Grid item xs={4.5} sx={{ marginTop: 10 }}>
+        <Grid item xs={4} sx={{ marginTop: 10 }}>
           <Grid>
             <Card sx={{ display: 'flex', height: 120, borderRadius: 4, maxWidth: 535 }}>
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -284,13 +284,8 @@ function Home(navigation) {
                           </>
                         )
                       }
-
                     })}
-
-
                     <span style={{ marginLeft: 5 }}>{user.username}</span>
-
-
                     <span>
                       <form className='form-conrol' style={{ marginLeft: 30 }}>
                         <div style={{ display: 'flex' }}>
@@ -469,7 +464,6 @@ function Home(navigation) {
         <Grid>
           <Card sx={{ minWidth: 300, marginTop: 10 }}>
             <CardContent>
-
               <Typography component="div">
                 {users.map((use) => {
                   { console.log('uuuuuuuuuu', users) }
@@ -493,7 +487,6 @@ function Home(navigation) {
                              <Grid>
                                 <Avatar onClick={() => others_profile(use.id)} sx={{ bgcolor: red[500] }} src={img_name} />
                               </Grid> 
-
                             : <Grid>
                               <Avatar onClick={() => others_profile(use.id)} sx={{ bgcolor: red[500] }} />
                             </Grid>
