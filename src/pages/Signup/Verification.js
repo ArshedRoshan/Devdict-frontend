@@ -19,7 +19,7 @@ function Verification() {
  const verify = ()=>{
     let item = {id:id,username:username}
     console.log('ver',item)
-    axios.post("http://localhost:8000/api/validate",item).then((response)=>{
+    axios.post("https://devdict.online/api/validate",item).then((response)=>{
         console.log('verifuuuu',response.data)
         setVerified(response.data)
     })

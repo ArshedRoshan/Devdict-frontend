@@ -46,7 +46,7 @@ function Signup() {
     }
     let items = {first_name,last_name,email,password,username,phone_number,Account_type,company_name,Describe_company,hiring_for}
     console.log('items',items);
-    axios.post('http://localhost:8000/api/signup',items).then((response)=>{
+    axios.post('https://devdict.online/api/signup',items).then((response)=>{
       console.log('response',response.data);
       if(response.data === 200){
         setToken(true)

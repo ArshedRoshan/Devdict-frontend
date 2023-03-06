@@ -40,7 +40,7 @@ export default function Post(props) {
     formField.append('user',user)
     await axios({
       method: 'post',
-      url:'http://localhost:8000/api/add_dp',
+      url:'https://devdict.online/api/add_dp',
       data: formField
     }).then(response=>{
       console.log(response.data);

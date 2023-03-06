@@ -48,7 +48,7 @@ export default function Search(props) {
  const others_profile=(id)=>{
   console.log('other',id)
   const result = axios.create({
-    baseURL: `http://localhost:8000/api/my_profile/`
+    baseURL: `https://devdict.online/api/my_profile/`
   })
   result.get(`/${id}`, { withCredentials: 'include'}).then((response) => {
     console.log('other_profile', response.data)

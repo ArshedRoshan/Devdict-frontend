@@ -53,7 +53,7 @@ function Applicants() {
   const applicant_view = () => {
 
     const result = axios.create({
-      baseURL: `http://localhost:8000/api/applicant_view/`
+      baseURL: `https://devdict.online/api/applicant_view/`
     })
     result.get(`/${user.user_id}`, { withCredentials: 'include' }).then((response) => {
       console.log('appliacant re', response.data)
@@ -64,7 +64,7 @@ function Applicants() {
 
   const process_true = (id) => {
     const result = axios.create({
-      baseURL: `http://localhost:8000/api/process_list/`
+      baseURL: `https://devdict.online/api/process_list/`
     })
     result.get(`/${id}/${user.user_id}`, { withCredentials: 'include' }).then((response) => {
       console.log('response after', response.data)
@@ -79,7 +79,7 @@ function Applicants() {
   const pending_table = () => {
     console.log('function provoked')
     const result = axios.create({
-      baseURL: `http://localhost:8000/api/process_list1/`
+      baseURL: `https://devdict.online/api/process_list1/`
     })
     result.get(`/${user.user_id}`, { withCredentials: 'include' }).then((response) => {
       console.log('response after', response.data)
@@ -90,7 +90,7 @@ function Applicants() {
 
   const accept_true = (id) => {
     const result = axios.create({
-      baseURL: `http://localhost:8000/api/accept/`
+      baseURL: `https://devdict.online/api/accept/`
     })
     result.get(`/${id}/${user.user_id}`, { withCredentials: 'include' }).then((response) => {
       console.log('response accept true', response.data)
@@ -103,7 +103,7 @@ function Applicants() {
 
   const accept_table = () => {
     const result = axios.create({
-      baseURL: `http://localhost:8000/api/accept1/`
+      baseURL: `https://devdict.online/api/accept1/`
     })
     result.get(`/${user.user_id}`, { withCredentials: 'include' }).then((response) => {
       console.log('response accept', response.data)

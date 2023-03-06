@@ -60,7 +60,7 @@ const style = {
   
     await axios({
       method: 'post',
-      url:'http://localhost:8000/api/application',
+      url:'https://devdict.online/api/application',
       data:formField
       
     }).then(response=>{

@@ -16,7 +16,7 @@ function Company() {
 const {company,setCompany} = useContext(CompanyListContext)
 
 const company_list = (e)=>{
-  axios.get('http://localhost:8000/api/company_list').then((response)=>{
+  axios.get('https://devdict.online/api/company_list').then((response)=>{
     setCompany(response.data)
     console.log('compnay',response.data);
   })

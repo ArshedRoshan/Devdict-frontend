@@ -86,7 +86,7 @@ function Home(navigation) {
 
   const view = () => {
     console.log('function running')
-    axios.get('http://localhost:8000/post/postview').then((response) => {
+    axios.get('https://devdict.online/post/postview').then((response) => {
       setPost(response.data)
       console.log('1srrr', response.data)
 
@@ -95,7 +95,7 @@ function Home(navigation) {
 
   // user side suggestion
   const user_list = (e) => {
-    axios.get('http://localhost:8000/api/user_list').then((response) => {
+    axios.get('https://devdict.online/api/user_list').then((response) => {
 
       setUsers(response.data)
 
@@ -115,7 +115,7 @@ function Home(navigation) {
   const likeuser = (id) => {
 
     const result = axios.create({
-      baseURL: `http://localhost:8000/post/like/`
+      baseURL: `https://devdict.online/post/like/`
     })
     result.post(`/${id}`, { withCredentials: 'include', use }).then((response) => {
     })
@@ -139,7 +139,7 @@ function Home(navigation) {
     console.log('usersss', users.id)
     // console.log('following_username', following_username)
     let data = { follower_username: use, following_username: following_username }
-    axios.post('http://localhost:8000/api/follow', data).then((response) => {
+    axios.post('https://devdict.online/api/follow', data).then((response) => {
       console.log('follow res', response.data)
     })
 
@@ -149,7 +149,7 @@ function Home(navigation) {
   //   let following_username = username
   //   let use = user.username
   //   let data = { follower_username: use, following_username: following_username }
-  //   axios.post('http://localhost:8000/api/unfollow', data).then((response) => {
+  //   axios.post('https://devdict.online/api/unfollow', data).then((response) => {
   //   })
 
   // }
@@ -161,7 +161,7 @@ function Home(navigation) {
 
   const likeview = (id) => {
     const result = axios.create({
-      baseURL: `http://localhost:8000/post/like_view/`
+      baseURL: `https://devdict.online/post/like_view/`
     })
     result.get(`/${id}`, { withCredentials: 'include' }).then((response) => {
 
@@ -173,7 +173,7 @@ function Home(navigation) {
   const others_profile = (id) => {
     console.log('other', id)
     const result = axios.create({
-      baseURL: `http://localhost:8000/api/my_profile/`
+      baseURL: `https://devdict.online/api/my_profile/`
     })
     result.get(`/${id}`, { withCredentials: 'include' }).then((response) => {
       console.log('other_profile', response.data)
@@ -189,7 +189,7 @@ function Home(navigation) {
   //   user = user.user_id
   //   console.log('commentsss',post.users.posts)
   //   let data ={commented_by:user,}
-  //   axios.post('http://localhost:8000/api/follow', data)
+  //   axios.post('https://devdict.online/api/follow', data)
   //  }
 
 
@@ -198,7 +198,7 @@ function Home(navigation) {
   const application_status = () => {
     console.log('function provoked')
     const result = axios.create({
-      baseURL: `http://localhost:8000/api/application_status/`
+      baseURL: `https://devdict.online/api/application_status/`
     })
     result.get(`/${user.user_id}`, { withCredentials: 'include' }).then((response) => {
       console.log('status', response.data)

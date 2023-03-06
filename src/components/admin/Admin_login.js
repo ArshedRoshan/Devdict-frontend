@@ -42,7 +42,7 @@ function Admin_login() {
           setError(true)
         }
         let data ={username,password}
-        axios.post('http://localhost:8000/api/token/',data).then((response)=>{
+        axios.post('https://devdict.online/api/token/',data).then((response)=>{
             console.log('from submittedddd',response.data)
             console.log('from submittedddd111',response.data.is_admin)
             let value = response.data

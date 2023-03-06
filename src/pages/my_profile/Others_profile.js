@@ -51,7 +51,7 @@ function Others_profile() {
       setFollow('following')
       // console.log('following_username', following_username)
       let data = { follower_username: use, following_username: following_username }
-      axios.post('http://localhost:8000/api/follow', data).then((response) => {
+      axios.post('https://devdict.online/api/follow', data).then((response) => {
         console.log('follow res',response.data)
         setProfile(response.data)
       })
@@ -79,7 +79,7 @@ function Others_profile() {
       {console.log('other',profile[0].username)}
       let detail
       detail = {following,follower}
-      axios.post('http://localhost:8000/api/follow_check',detail).then((response)=>{
+      axios.post('https://devdict.online/api/follow_check',detail).then((response)=>{
           console.log('check_follow',response.data)
           setFollow(response.data)
           }) 

@@ -28,7 +28,7 @@ function QuestionView() {
 
 
     const view = (e)=>{
-        axios.get('http://localhost:8000/post/questionview').then((response)=>{
+        axios.get('https://devdict.online/post/questionview').then((response)=>{
             setQuestion(response.data)
             
         })
@@ -37,7 +37,7 @@ function QuestionView() {
     const likeuser = (id) => {
 
       const result = axios.create({
-        baseURL: `http://localhost:8000/post/question_likes/`
+        baseURL: `https://devdict.online/post/question_likes/`
       })
       result.post(`/${id}`, { withCredentials: 'include',use}).then((response) => {
       })
@@ -48,7 +48,7 @@ function QuestionView() {
     const dislikeuser = (id) => {
 
       const result = axios.create({
-        baseURL: `http://localhost:8000/post/dislike/`
+        baseURL: `https://devdict.online/post/dislike/`
       })
       result.post(`/${id}`, { withCredentials: 'include',use}).then((response) => {
       })
@@ -59,7 +59,7 @@ function QuestionView() {
 
     const detail = (id,e)=>{
     const result = axios.create({
-      baseURL: `http://localhost:8000/post/questiondetail/`
+      baseURL: `https://devdict.online/post/questiondetail/`
     })
     result.post(`/${id}`,{withCredentials:'include'}).then((response) => {
       setDetails(response.data)
@@ -73,7 +73,7 @@ function QuestionView() {
     let saved_question = question.id
     console.log('save_question',question.id)
     let save = {user1:user,saved_question:saved_question}
-    axios.post('http://localhost:8000/post/save_question',{
+    axios.post('https://devdict.online/post/save_question',{
       user:user.user_id,
       saved_question:id
     }).then((response)=>{

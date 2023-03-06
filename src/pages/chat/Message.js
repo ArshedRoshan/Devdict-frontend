@@ -32,7 +32,7 @@ function Message(props) {
 
 
  const get_room=()=>{
-  axios.get('http://localhost:8000/chat/get_room').then((response)=>{
+  axios.get('https://devdict.online/chat/get_room').then((response)=>{
     console.log('reeom gett',response.data)
   })
  }
@@ -42,7 +42,7 @@ function Message(props) {
  const get_message = (id) =>{
   console.log('chatttt function')
   const result = axios.create({
-    baseURL: `http://localhost:8000/chat/view_message/`
+    baseURL: `https://devdict.online/chat/view_message/`
   })
   result.get(`/${id}`, { withCredentials: 'include' }).then((response) => {
     console.log('message vannu makalee...', response.data)
@@ -64,10 +64,10 @@ useEffect(()=>{
   
    
        
-    
+    // (`ws://127.0.0.1:8000/ws/${props.name}channel/`))
       get_message(props.name)
     
-        setSocket(new W3CWebSocket(`ws://127.0.0.1:8000/ws/${props.name}channel/`))
+        setSocket(new W3CWebSocket(`wss://devdict.online/ws/${props.name}channel/`))
         console.log(socket,"hey")
         socket.onopen = () => {
             console.log("WebSocket Client Connected");

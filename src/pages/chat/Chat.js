@@ -31,7 +31,7 @@ function Chat(props) {
     const [room1,setRoom1] = useState('')
 
     const get_room = () =>{
-      axios.get('http://localhost:8000/chat/get_room').then((response)=>{
+      axios.get('https://devdict.online/chat/get_room').then((response)=>{
         console.log('rrooom',response.data)
       })
     }
@@ -39,7 +39,7 @@ function Chat(props) {
 
     const fo_user = ()=>{
      
-         axios.get('http://localhost:8000/api/chat_users').then((response)=>{
+         axios.get('https://devdict.online/api/chat_users').then((response)=>{
             console.log('chat_list',response.data)
             setChatlist(response.data)
         })
@@ -58,7 +58,7 @@ function Chat(props) {
     let items = {sender:sender,reciever:reciever,name}
     console.log('items',items)
     if(name != ''){
-    axios.post('http://localhost:8000/chat/create_room',items).then((response)=>{
+    axios.post('https://devdict.online/chat/create_room',items).then((response)=>{
       console.log('rooom res',response.data)
       console.log('rooom res1212',response.data.id)
       setRoom1(response.data.id)

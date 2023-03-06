@@ -40,7 +40,7 @@ export default function ComRe(props) {
     let Comment = props.id
     let items = {commented_by,Comment,content}
     console.log('comreee',items)
-    axios.post('http://localhost:8000/post/add_reply',items).then((response)=>{
+    axios.post('https://devdict.online/post/add_reply',items).then((response)=>{
        console.log('comment_reply',response.data)
        setContere(false)
     })

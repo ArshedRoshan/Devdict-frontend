@@ -25,7 +25,7 @@ function Login() {
       setError(true)
     }
     console.log('form submitted');
-    let response = await fetch('http://localhost:8000/api/token/', {
+    let response = await fetch('https://devdict.online/api/token/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

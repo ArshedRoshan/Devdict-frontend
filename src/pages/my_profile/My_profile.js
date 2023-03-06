@@ -54,7 +54,7 @@ function My_profile({route}) {
     }
 
     const get_save = ()=>{
-      axios.get(`http://localhost:8000/post/view_saved/${user.user_id}`).then((response)=>{
+      axios.get(`https://devdict.online/post/view_saved/${user.user_id}`).then((response)=>{
         console.log('save res',response.data)
         setSave(response.data)
         
@@ -64,7 +64,7 @@ function My_profile({route}) {
 
     const getPosts=()=>{
       const result = axios.create({
-        baseURL: `http://localhost:8000/api/my_profile/`
+        baseURL: `https://devdict.online/api/my_profile/`
       })
       result.get(`/${user.user_id}`, { withCredentials: 'include'}).then((response) => {
         console.log('response', response.data)

@@ -63,19 +63,19 @@ function Admin_home() {
 
   }
   const get_user = () => {
-    axios.get('http://localhost:8000/api/admin_user').then((response) => {
+    axios.get('https://devdict.online/api/admin_user').then((response) => {
       setAdmin(response.data)
       // console.log('blo',response.data)
     })
   }
   const get_com = () => {
-    axios.get('http://localhost:8000/api/admin_comp').then((response) => {
+    axios.get('https://devdict.online/api/admin_comp').then((response) => {
       setCom(response.data)
     })
   }
 
   const block_user = (id) => {
-    axios.post(`http://localhost:8000/api/block_user/${id}`).then((response) => {
+    axios.post(`https://devdict.online/api/block_user/${id}`).then((response) => {
       // console.log('blocked_user',response.data)
       setBlock('unblock')
       // setBlock('Unblock')
@@ -84,7 +84,7 @@ function Admin_home() {
   }
 
   const block_post = (id) => {
-    axios.post(`http://localhost:8000/post/blockpost/${id}`).then((response) => {
+    axios.post(`https://devdict.online/post/blockpost/${id}`).then((response) => {
       // console.log('blocked_user',response.data)
       setPosb('unblock')
       // setBlock('Unblock')
@@ -92,14 +92,14 @@ function Admin_home() {
     })
   }
   async function fetchData() {
-    const response = await axios.get('http://localhost:8000/post/admin_post');
+    const response = await axios.get('https://devdict.online/post/admin_post');
     setPos(response.data.results);
     setNextPage(response.data.next);
     setPrevPage(response.data.previous);
   }
   const view = () => {
     console.log('function running')
-    axios.get('http://localhost:8000/post/postview').then((response) => {
+    axios.get('https://devdict.online/post/postview').then((response) => {
       setPost1(response.data)
       let a = 4 + 3;
       console.log('111srrr', response.data)
@@ -108,24 +108,24 @@ function Admin_home() {
     })
   }
   const postCount = () => {
-    axios.get('http://localhost:8000/post/postcount').then((response) => {
+    axios.get('https://devdict.online/post/postcount').then((response) => {
       setPcount(response.data)
     })
-    axios.get('http://localhost:8000/post/questioncount').then((response) => {
+    axios.get('https://devdict.online/post/questioncount').then((response) => {
       setQcount(response.data)
     })
   }
 
 
   const getData = async () => {
-    axios.get('http://localhost:8000/api/count').then((response) => {
+    axios.get('https://devdict.online/api/count').then((response) => {
       setCount(response.data)
       console.log('countt', response.data)
       setChart(true)
     })
   }
   const getData1 = async () => {
-    axios.get('http://localhost:8000/post/popularposts').then((response) => {
+    axios.get('https://devdict.online/post/popularposts').then((response) => {
       setLike(response.data)
       console.log('likeeeee', response.data)
     })

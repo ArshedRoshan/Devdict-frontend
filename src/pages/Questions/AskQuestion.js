@@ -23,7 +23,7 @@ function AskQuestion() {
     let user = userid.user.user_id
     const items = {title,body1,body2,user}
     console.log('items',items);
-    axios.post('http://localhost:8000/post/questions',items).then((response)=>{
+    axios.post('https://devdict.online/post/questions',items).then((response)=>{
       console.log('response',response.data);
       setQue(false)
       navigate('/questionview')

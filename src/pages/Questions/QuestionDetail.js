@@ -34,7 +34,7 @@ let Question = details[0].id
 console.log('setiall',Question)
 
  let items = {answer,user,Question}
-  axios.post('http://localhost:8000/post/answers',items).then((response)=>{
+  axios.post('https://devdict.online/post/answers',items).then((response)=>{
     setAns(!ans)
   })
 }
@@ -44,7 +44,7 @@ const answerlike = (id) => {
   {console.log('answerlike',id)}
   let use = user.username
   const result = axios.create({
-    baseURL: `http://localhost:8000/post/answer_likes/`
+    baseURL: `https://devdict.online/post/answer_likes/`
   })
   result.post(`/${id}`, { withCredentials: 'include',use}).then((response) => {
   })
@@ -53,7 +53,7 @@ const answerlike = (id) => {
 }
 const detail = (id)=>{
   const result = axios.create({
-    baseURL: `http://localhost:8000/post/questiondetail/`
+    baseURL: `https://devdict.online/post/questiondetail/`
   })
   result.post(`/${id}`,{withCredentials:'include'}).then((response) => {
     setDetails(response.data)
@@ -66,7 +66,7 @@ const answerdislike = (id) => {
   console.log('answerdislike',id)
   let use = user.username
   const result = axios.create({
-    baseURL: `http://localhost:8000/post/answer_dislike/`
+    baseURL: `https://devdict.online/post/answer_dislike/`
   })
   result.post(`/${id}`, { withCredentials: 'include',use}).then((response) => {
   })

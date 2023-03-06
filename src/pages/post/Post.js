@@ -45,7 +45,7 @@ export default function Post(props) {
     formField.append('user',user)
      axios({
       method: 'post',
-      url:'http://localhost:8000/post/post1',
+      url:'https://devdict.online/post/post1',
       data: formField
     }).then((response)=>{
       console.log(response.data);

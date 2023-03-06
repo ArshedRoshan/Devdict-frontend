@@ -49,7 +49,7 @@ const style = {
     
     await axios({
       method: 'post',
-      url:'http://localhost:8000/post/add_comment',
+      url:'https://devdict.online/post/add_comment',
       data:items
        
       
