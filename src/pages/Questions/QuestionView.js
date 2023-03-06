@@ -97,7 +97,7 @@ const theme = useTheme();
           <Sidebar />
         </Grid>
 
-        <Grid  sx={{ marginTop: 10,width:'80%'}}>
+        <Grid  sx={{ marginTop: 10,width:'100%'}}>
        <Link to={'/question'}> <Button sx={{marginLeft:120}} variant="contained">Ask Questions</Button></Link>
         <Grid>
               <h2>All Questions</h2>

@@ -341,7 +341,7 @@ function Home(navigation) {
                     <Card sx={{ maxWidth: 550, marginTop: 3 }}>
                       {img_name1 != null ?
 
-                      <CardHeader
+                        <CardHeader
                           avatar={
                             <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={img_name1}>
                             </Avatar>
@@ -355,20 +355,20 @@ function Home(navigation) {
                           }
                           title={pos.username}
                         /> : <CardHeader
-                        avatar={
-                          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                          </Avatar>
+                          avatar={
+                            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                            </Avatar>
 
-                        }
+                          }
 
-                        action={
-                          <IconButton aria-label="settings">
-                            <MoreVertIcon />
-                          </IconButton>
-                        }
-                        title={pos.username}
-                      />
-                     } 
+                          action={
+                            <IconButton aria-label="settings">
+                              <MoreVertIcon />
+                            </IconButton>
+                          }
+                          title={pos.username}
+                        />
+                      }
 
 
                       <CardMedia
@@ -462,7 +462,7 @@ function Home(navigation) {
           </Grid>
         </Grid>
         <Grid>
-          <Card sx={{ minWidth: 300, marginTop: 10 }}>
+          <Card sx={{ minWidth: 300, marginTop: 10,marginLeft:5 }}>
             <CardContent>
               <Typography component="div">
                 {users.map((use) => {
@@ -484,13 +484,13 @@ function Home(navigation) {
                           <>
                             {console.log('uuuull', use.id)}
                             {img_name !== null ?
-                             <Grid>
+                              <Grid>
                                 <Avatar onClick={() => others_profile(use.id)} sx={{ bgcolor: red[500] }} src={img_name} />
-                              </Grid> 
-                            : <Grid>
-                              <Avatar onClick={() => others_profile(use.id)} sx={{ bgcolor: red[500] }} />
-                            </Grid>
-                           }
+                              </Grid>
+                              : <Grid>
+                                <Avatar onClick={() => others_profile(use.id)} sx={{ bgcolor: red[500] }} />
+                              </Grid>
+                            }
 
 
 
@@ -521,7 +521,7 @@ function Home(navigation) {
 
           {/* user suggestion */}
           {user.Account_type == 'personal' &&
-            <Card sx={{ maxWidth: 500, marginTop: 7, height: '500px', overflowY: 'scroll' }}>
+            <Card sx={{ maxWidth: 400, marginTop: 7, height: '500px', overflowY: 'scroll',marginLeft:5}}>
               <CardContent>
                 <Typography sx={{ fontSize: 10, marginRight: 35 }} color="text.secondary" gutterBottom>
                   <Grid justifyContent={'space-between'} sx={{ marginRight: 9, display: 'flex' }}>
