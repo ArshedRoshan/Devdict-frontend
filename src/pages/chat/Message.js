@@ -153,7 +153,7 @@ useEffect(()=>{
   return(
     <>
       {user.username === messag_e.sender ?
-       <CardContent sx={{color:'blue',display:'flex',justifyContent: 'right',backgroundColor:'antiquewhite',maxWidth:'80px',marginLeft:40,marginTop:2}}>
+       <CardContent sx={{color:'blue',display:'flex',justifyContent: 'right',backgroundColor:'antiquewhite',maxWidth:'80px',marginLeft:50,marginTop:2}}>
        {messag_e.message}
            </CardContent>:
             <CardContent sx={{color:'blue',display:'flex',justifyContent: 'left',color:'black',maxWidth:'80px',marginTop:2}}>

@@ -117,7 +117,8 @@ function Others_profile() {
               "&::-webkit-scrollbar-thumb": {
             //   backgroundColor: "#661414",
               borderRadius: 7
-              }  
+              },
+              marginLeft:25  
                  }}>
             
                <Stack direction="colomn" justifyContent="space-around" sx={{border:"1px",borderRadius:2,height:"30vh",m:0.5,p:1}}>

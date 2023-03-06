@@ -104,8 +104,7 @@ function My_profile({ route }) {
               "&::-webkit-scrollbar-thumb": {
                 //   backgroundColor: "#661414",
                 borderRadius: 7
-              }
-            }}>
+              },marginLeft:25}}>
 
               <Stack direction="colomn" justifyContent="space-around" sx={{ border: "1px", borderRadius: 2, height: "30vh", m: 0.5, p: 1 }}>
                 {profile && profile[0].pro.map((dp) => {
@@ -153,8 +152,8 @@ function My_profile({ route }) {
                 </Grid> */}
 
               <Grid direction="row" sx={{ border: "1px", borderRadius: 2, pb: 1, m: 0.5 }}>
-                <div style={{marginLeft:150}}>
-                <Add_dp name='change profile'>  <Button n >Change Profile</Button> </Add_dp>
+                <div style={{ marginLeft: 150 }}>
+                  <Add_dp name='change profile'>  <Button n >Change Profile</Button> </Add_dp>
                 </div>
                 <Stack direction="colomn" spacing="4px" justifyContent="center" sx={{ pt: 2 }}>
                   <Button variant={photoBt} color="error" sx={{ mr: 1 }} onClick={handlePhotobt}>Posts</Button>

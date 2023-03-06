@@ -239,7 +239,7 @@ function Home(navigation) {
     <div>
 
       <Grid container sx={{ backgroundColor: '#f3f2ef' }}>
-        <Grid item xs={3.5} sx={{ marginTop: 5 }} >
+        <Grid item xs={3} sx={{ marginTop: 5 }} >
           <Sidebar />
         </Grid>
 

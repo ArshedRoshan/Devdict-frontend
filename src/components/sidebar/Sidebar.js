@@ -149,6 +149,7 @@ function Sidebar(props){
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          height:50
         }}
       >
         <Toolbar>

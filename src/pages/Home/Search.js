@@ -90,10 +90,11 @@ console.log('others_profile',profile)
               
               <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               <div style={{display:'flex'}}>
+                
               {profilepicture && img_name !== null ?  <Grid> 
                 <Avatar onClick={()=>others_profile(result.id)}    sx={{bgcolor: red[500],fontSize:'50px'}} src={img_name} />
                   </Grid> : <Grid>    
-                  <Avatar  sx={{bgcolor: red[500]}} />  
+                  <Avatar onClick={()=>others_profile(result.id)}   sx={{bgcolor: red[500]}} />  
                   </Grid>
             }
             <Grid sx={{marginLeft:3}}>
