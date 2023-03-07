@@ -480,12 +480,13 @@ function Home(navigation) {
                   return (
                     <>
                       <Grid justifyContent={'space-between'} sx={{ marginRight: 25, marginBottom: 2 }} display={'flex'}>
-                        {user.username !== use.username &&
+                        {user.username !== use.username  &&
                           <>
+                          {use.username !== 'admin' &&<>
                             {console.log('uuuull', use.id)}
                             {img_name !== null ?
                               <Grid>
-                                <Avatar onClick={() => others_profile(use.id)} sx={{ bgcolor: red[500] }} src={img_name} />
+                              <Avatar onClick={() => others_profile(use.id)} sx={{ bgcolor: red[500] }} src={img_name} />
                               </Grid>
                               : <Grid>
                                 <Avatar onClick={() => others_profile(use.id)} sx={{ bgcolor: red[500] }} />
@@ -503,6 +504,7 @@ function Home(navigation) {
                             </Grid>
                             {console.log('postsss', post)}
 
+                            </>}
 
                           </>
                         }
