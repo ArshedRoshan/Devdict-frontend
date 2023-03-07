@@ -49,7 +49,8 @@ function Signup() {
     axios.post('https://devdict.online/api/signup',items).then((response)=>{
       console.log('response',response.data);
       if(response.data === 200){
-        setToken(true)
+        navigate('/login')
+        // setToken(true)
         // verify();
         
       }
