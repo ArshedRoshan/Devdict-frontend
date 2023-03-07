@@ -242,7 +242,7 @@ function Admin_home() {
         <Grid item xs={7.5} >
 
           {Account_type === 'personal' &&
-            <Card sx={{ width: 1000, marginTop: 7 }}>
+            <Card sx={{ width: 1000,marginTop:20 }}>
               <CardActionArea>
 
                 <CardContent>
@@ -320,7 +320,7 @@ function Admin_home() {
             </Card>
           }
           {Account_type === 'company' &&
-            <Card sx={{ width: 1000, marginTop: 7 }}>
+            <Card sx={{ width: 1000, marginTop:20 }}>
               <CardActionArea>
                 <CardContent>
 
@@ -478,7 +478,7 @@ function Admin_home() {
           }
         </Grid>
         <Grid>
-          <FormControl sx={{ mt: 5, width: 200,ml:6 }}>
+          <FormControl sx={{ mt: 5, width: 130,ml:6 }}>
             <InputLabel id="demo-simple-select-helper-label"  >Account type</InputLabel>
             <Select
               labelId="demo-simple-select-helper-label"
