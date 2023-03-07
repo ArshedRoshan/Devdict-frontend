@@ -385,10 +385,7 @@ function Admin_home() {
               <Grid container spacing={5} mt={3} >
                 {pos.map((post) => {
                   console.log('isssss', post)
-                  let img_name = post.image.replace(
-                    "/frontend/src/static/",
-                    ""
-                  );
+                  let img_name = post.image
                   return (
 
                     <>
@@ -396,7 +393,7 @@ function Admin_home() {
                         <CardMedia
                           component="img"
                           height="280"
-                          image={require("../../static/" + img_name)}
+                          image={img_name}
                         />
                         <CardActions>
                           {post.is_active == 1 ?
@@ -457,31 +454,31 @@ function Admin_home() {
                   </Card>
                 </Grid>
               </Grid>
-              <Grid container spacing={6}>
+              <Grid container spacing={4}>
                 <Grid item>
-                <div style={{ width: 500, height: 500, marginTop: 60 }}>
-                  {chartData.labels && chartData.datasets && (
-                    <Pie data={chartData} />
-                  )}
+                  <div style={{ width: 400, height: 400, marginTop: 60 }}>
+                    {chartData.labels && chartData.datasets && (
+                      <Pie data={chartData} />
+                    )}
 
-                </div>
+                  </div>
                 </Grid>
                 <Grid item>
-                <div style={{ width: 500, height: 500, marginTop: 80 }}>
-                  {chartData1.labels && chartData1.datasets && (
-                    <Bar data={chartData1} />
-                  )}
-                  {console.log('ggg', likecount)}
-                  {console.log('ppp', likecount.a)}
-                  {console.log('klklk', likecount.b)}
-                </div>
+                  <div style={{ width: 400, height: 400, marginTop: 80 }}>
+                    {chartData1.labels && chartData1.datasets && (
+                      <Bar data={chartData1} />
+                    )}
+                    {console.log('ggg', likecount)}
+                    {console.log('ppp', likecount.a)}
+                    {console.log('klklk', likecount.b)}
+                  </div>
                 </Grid>
               </Grid>
             </>
           }
         </Grid>
         <Grid>
-          <FormControl sx={{ mt: 5, width: 200 }}>
+          <FormControl sx={{ mt: 5, width: 200,ml:6 }}>
             <InputLabel id="demo-simple-select-helper-label"  >Account type</InputLabel>
             <Select
               labelId="demo-simple-select-helper-label"
