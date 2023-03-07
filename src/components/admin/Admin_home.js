@@ -382,14 +382,14 @@ function Admin_home() {
 
           {Account_type === 'post' &&
             <>
-              <Grid container spacing={5} mt={3} >
+              <Grid container mt={3} >
                 {pos.map((post) => {
                   console.log('isssss', post)
                   let img_name = post.image
                   return (
 
                     <>
-                      <Card sx={{ width: '450px', marginLeft: 4, border: '1px solid', marginBottom: 2 }} >
+                      <Card sx={{ width: '400px', marginLeft: 4, border: '1px solid', marginBottom: 2 }} >
                         <CardMedia
                           component="img"
                           height="280"
