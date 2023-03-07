@@ -389,7 +389,7 @@ function Admin_home() {
                   return (
 
                     <div style={{display:'flex'}}>
-                      <Card sx={{ width: '400px', marginLeft: 4, border: '1px solid', marginBottom: 2 }} >
+                      <Card sx={{ width: '300px', marginLeft: 4, border: '1px solid', marginBottom: 2 }} >
                         <CardMedia
                           component="img"
                           height="280"
