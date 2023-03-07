@@ -388,7 +388,7 @@ function Admin_home() {
                   let img_name = post.image
                   return (
 
-                    <>
+                    <div>
                       <Card sx={{ width: '400px', marginLeft: 4, border: '1px solid', marginBottom: 2 }} >
                         <CardMedia
                           component="img"
@@ -404,7 +404,7 @@ function Admin_home() {
                       </Card>
 
 
-                    </>
+                    </div>
 
 
                   )
