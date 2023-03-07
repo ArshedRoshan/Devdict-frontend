@@ -427,7 +427,7 @@ function Admin_home() {
             <>
               <Grid container spacing={2}>
                 <Grid item>
-                  <Card sx={{ width: 300, mt: 3, marginLeft: 4, height: 200 }}>
+                  <Card sx={{ width: '20em', mt: 3, marginLeft: 4, height: '10em' }}>
                     <CardContent>
                       <Typography variant="h5" component="div">
                         Total Posts
@@ -441,7 +441,7 @@ function Admin_home() {
                 </Grid>
 
                 <Grid item>
-                  <Card sx={{ width: 300, mt: 3, marginLeft: 4, height: 200 }}>
+                  <Card sx={{ width: '20em', mt: 3, marginLeft: 4, height: '10em' }}>
                     <CardContent>
                       <Typography variant="h5" component="div">
                         Total Questions
