@@ -242,7 +242,7 @@ function Admin_home() {
         <Grid item xs={7.5} >
 
           {Account_type === 'personal' &&
-            <Card sx={{ width: 1000,marginTop:20 }}>
+            <Card sx={{ width: 1000,marginTop:14 }}>
               <CardActionArea>
 
                 <CardContent>
@@ -320,7 +320,7 @@ function Admin_home() {
             </Card>
           }
           {Account_type === 'company' &&
-            <Card sx={{ width: 1000, marginTop:20 }}>
+            <Card sx={{ width: 1000, marginTop:14 }}>
               <CardActionArea>
                 <CardContent>
 
