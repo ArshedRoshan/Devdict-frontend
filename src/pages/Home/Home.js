@@ -523,7 +523,7 @@ function Home(navigation) {
 
           {/* user suggestion */}
           {user.Account_type == 'personal' &&
-            <Card sx={{ maxWidth: 400, marginTop: 7, height: '500px', overflowY: 'scroll',marginLeft:5}}>
+            <Card sx={{ maxWidth: 500, marginTop: 7, height: '500px', overflowY: 'scroll',marginLeft:5}}>
               <CardContent>
                 <Typography sx={{ fontSize: 10, marginRight: 35 }} color="text.secondary" gutterBottom>
                   <Grid justifyContent={'space-between'} sx={{ marginRight: 9, display: 'flex' }}>
@@ -542,7 +542,7 @@ function Home(navigation) {
                     return <div>
                       <Avatar sx={{ bgcolor: red[500] }} />
                       <Typography sx={{ display: 'flex', marginTop: '-33px', marginLeft: '47px' }}>{joo.companyName}</Typography>
-                      <div className='progress' style={{ marginTop: '20px', width: 350, display: 'flex', marginTop: '-20px', marginLeft: '90px' }}>
+                      <div className='progress' style={{ marginTop: '20px', width: 350,marginTop: '-20px', marginLeft: '110px' }}>
                         {joo.processing == 'True' && <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemax="100" style={{ width: '40%' }}></div>}
                         {joo.processing == 'False' && <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemax="100" style={{ width: '20%' }} ></div>}
                         {joo.processing == 'True' & joo.Accept == 'True' && <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemax="100" style={{ width: '100%' }}></div>}

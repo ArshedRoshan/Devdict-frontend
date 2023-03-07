@@ -101,12 +101,12 @@ const theme = useTheme();
        <Link to={'/question'}> <Button sx={{marginLeft:120}} variant="contained">Ask Questions</Button></Link>
         <Grid>
               <h2>All Questions</h2>
-              <hr style={{width: 1223}}/> 
+              <hr style={{width: '100%'}}/> 
           </Grid>
           {question.map((row)=>{
             return(
               <>
-              <Card sx={{ display: 'flex',marginTop: 5,width:1000 }}>
+              <Card sx={{ display: 'flex',marginTop: 5,width:'70%',marginLeft:'20%'}}>
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             
                 <CardContent sx={{ flex: '1 0 auto',display:'flex'}}>

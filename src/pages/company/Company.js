@@ -42,6 +42,8 @@ let img_name = profilepicture && profilepicture
   
       return(
         <Card sx={{height:500,width: 345,marginLeft:10}}>
+          {img_name &&
+          <>
           {profilepicture && img_name !== null ?
               <CardMedia
               component="img"
@@ -55,7 +57,8 @@ let img_name = profilepicture && profilepicture
               alt="green iguana"/>
               
               }
-              
+              </>
+            }
                
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
